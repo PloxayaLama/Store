@@ -1,14 +1,20 @@
 {
   "name": "mini-shop",
   "version": "1.0.0",
-  "repository": "https://github.com/PloxayaLama/Store.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PloxayaLama/Store.git"
+  },
   "author": "",
   "scripts": {
     "build": "webpack --config webpack.config.js --mode=production",
     "dev": "webpack-dev-server --config webpack.config.js --mode=development --watch"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vuex": "^3.5.1",
+    "vue-localstorage": "^0.6.2",
+    "vuex-persistedstate": "^4.0.0-beta.1"
   },
   "devDependencies": {
     "css-loader": "^1.0.0",
@@ -19,5 +25,12 @@
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
-  }
+  },
+  "description": "��#\u0000 \u0000S\u0000t\u0000o\u0000r\u0000e\u0000\r\u0000 \u0000",
+  "bugs": {
+    "url": "https://github.com/PloxayaLama/Store/issues"
+  },
+  "homepage": "https://github.com/PloxayaLama/Store#readme",
+  "main": "webpack.config.js",
+  "license": "ISC"
 }

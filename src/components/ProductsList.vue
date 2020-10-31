@@ -15,7 +15,7 @@
                     </router-link>
                 </h4>
                 <label>{{item.price}}</label>
-                <button class="btn">Add to cart</button>  
+                <button class="btn" @click="addToCart(item.item,item.price)">Add to cart</button>  
             </div>
         </div>
     </div>
@@ -28,11 +28,20 @@
             return {
                 items: [],
                 search: '',
-                searchResult: []
+                searchResult: [],
+                cart: [],
+                qwe: []
             };
         },
         mounted: function(){
             this.items = products;
+                /*if (localStorage.getItem('cart')) {
+                    try {
+                    this.qwe = JSON.parse(localStorage.getItem('cart'));
+                } catch(e) {
+                    localStorage.removeItem('cart');
+                }
+            }*/
         },
         computed: {
             filteredItems: function() {
@@ -44,6 +53,13 @@
                     return element.item.toUpperCase().includes(this.search.toUpperCase());
                 });
             },
+        },
+        methods:{
+            addToCart: function(it, price){
+                this.$store.commit('setCart', it);
+                this.$store.commit('setP',price);
+            },
+            
         }
     }
 </script>

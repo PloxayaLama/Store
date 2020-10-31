@@ -7,7 +7,7 @@
             Product not found
         </h2>
         <div>
-            <button v-on:click="addItem(index)" class="btn">Add to cart</button>  
+            <button v-on:click="addToCart(index)" class="btn">Add to cart</button>  
         </div>
     </div>
 </template>
@@ -24,6 +24,6 @@
             this.product = products.find((item) => {
                 return (item.id === Number(this.$route.params.id));
             });
-        }
+        },
     }
 </script>
