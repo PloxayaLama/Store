@@ -21,7 +21,7 @@
     </div>
 </template>
 <script>
-    import products from '../data/products.js'
+    //import products from '../data/products.js'
 
     export default {
         data: function () {
@@ -35,13 +35,6 @@
         },
         mounted: function(){
             this.items = products;
-                /*if (localStorage.getItem('cart')) {
-                    try {
-                    this.qwe = JSON.parse(localStorage.getItem('cart'));
-                } catch(e) {
-                    localStorage.removeItem('cart');
-                }
-            }*/
         },
         computed: {
             filteredItems: function() {

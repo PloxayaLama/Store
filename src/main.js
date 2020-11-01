@@ -9,7 +9,7 @@ import ProductsList from './components/ProductsList.vue'
 import Cart from './components/Cart.vue'
 import store from './store.js'
 
-const routes = [
+/*const routes = [
     { path: '/', component: ProductsList },
     { path: '/product/:id', component: ProductInfo },
     { path: '/shopping-cart', component: Cart }
@@ -17,7 +17,7 @@ const routes = [
 
 const router = new VueRouter({
     routes
-})
+})*/
 Vue.use(Vuex)
 Vue.use(VueRouter, VueLocalStorage)
 

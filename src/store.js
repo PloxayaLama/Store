@@ -5,7 +5,20 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const store= new Vuex.Store({
+const routes = require('./api/routes/routes');
+
+const express = require('express'),
+    app = express(),
+    mongoose = require('mongoose'),
+    St = require('./api/models/StoreModel'),
+    port = process.env.PORT || 3000
+
+mongoose.connect('mongodb://localhost/mystore');
+
+routes(app);
+app.listen(port);
+
+/*const store= new Vuex.Store({
     plugins: [createPersistedState()],
     state: {
         cart: [],
@@ -18,8 +31,8 @@ const store= new Vuex.Store({
     getters: {
         getCart:(state)=>
         {
-            return ('Товари:'+state.cart  + '  До сплати: '+state.price)
+            return ('Товари:'+state.cart + '  До сплати: '+state.price)
         },
     }
-})
+})*/
 export default store;

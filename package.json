@@ -7,18 +7,22 @@
   },
   "author": "",
   "scripts": {
+    "start": "nodemon store.js",
     "build": "webpack --config webpack.config.js --mode=production",
     "dev": "webpack-dev-server --config webpack.config.js --mode=development --watch"
   },
   "dependencies": {
     "vue": "^2.5.17",
     "vuex": "^3.5.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11",
     "vue-localstorage": "^0.6.2",
     "vuex-persistedstate": "^4.0.0-beta.1"
   },
   "devDependencies": {
     "css-loader": "^1.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^2.0.6",
     "vue-loader": "^15.4.2",
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.17",
